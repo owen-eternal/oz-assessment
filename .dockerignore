@@ -1,0 +1,9 @@
+.coverage
+.coverage.*
+.venv
+.git
+.github/
+.gitignore
+Dockerfile
+htmlcov/
+__pycache__/
