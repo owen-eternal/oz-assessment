@@ -1,0 +1,15 @@
+development:
+- name: Check code quality
+  run:
+  - flake8
+- name: Run code coverage
+  run:
+  - coverage run -m unittest discover 
+  - coverage report
+- name: Run developmet server
+  run:
+  - gunicorn --bind 0.0.0.0:$PORT wsgi:app
+production:
+- name: Run production server
+  run:
+  - gunicorn --bind 0.0.0.0:$PORT wsgi:app
