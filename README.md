@@ -28,6 +28,7 @@ It automatically builds a production ready flask application factory boilerplate
     - __init__.py           
     - bubble_sort.py          
 3. tests/
+    - __init__.py
     - test_api.py              
     - test_bubble_sort.py
 4. webapp/
