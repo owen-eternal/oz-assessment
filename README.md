@@ -17,37 +17,37 @@ An exception is thrown on the following conditions:
 2. **401** Elements in list must be less then Max Length | *the number of elements exceeds the max length set on the server.*
 
 
-#### Project Achitecture
+### Project Achitecture
 
 To build the project architecture, I used my own library called [mudbrick](https://pypi.org/project/mudbrick/).
 It automatically builds a production ready flask application factory boilerplate. [github repo](https://github.com/owen-eternal/mudbrick)
 
 1. autoscript/
-    - workflow.yaml         &nbsp;&nbsp;&nbsp;&nbsp;    **Jobs used to automate the server runs.**
+    - workflow.yaml            
 2. sorting/
-    - __init__.py           &nbsp;&nbsp;&nbsp;&nbsp;
-    - bubble_sort.py        &nbsp;&nbsp;&nbsp;&nbsp;    **bubble sort algorithm.**
+    - __init__.py           
+    - bubble_sort.py          
 3. tests/
-    - test_api.py           &nbsp;&nbsp;&nbsp;&nbsp;    **unit test for web api.**
-    - test_bubble_sort.py   &nbsp;&nbsp;&nbsp;&nbsp;    **unit tests for sorting algorithm.**
+    - test_api.py              
+    - test_bubble_sort.py
 4. webapp/
     - api/               
         - __init__.py
-        - routes.py         &nbsp;&nbsp;&nbsp;&nbsp;   **unit tests for sorting algorithm.**
+        - routes.py
     - swagger_docs/               
-        - config.py         &nbsp;&nbsp;&nbsp;&nbsp;   **configuration and template for SwaggerUI.**
-        - docs.yml          &nbsp;&nbsp;&nbsp;&nbsp;   **api documentation.**
-    - __init__.py           &nbsp;&nbsp;&nbsp;&nbsp;   **An instance of the app object**
-    - settings.py           &nbsp;&nbsp;&nbsp;&nbsp;   **settiings for flask enviromnents.**
-5. autorun.py               &nbsp;&nbsp;&nbsp;&nbsp;   **script to automate server builds and tests.**
-6. Procfile                 &nbsp;&nbsp;&nbsp;&nbsp;   **heroku entry point.**
-7. README.md                &nbsp;&nbsp;&nbsp;&nbsp;   **settings for flask enviromnents.**
-8. requirements.txt         &nbsp;&nbsp;&nbsp;&nbsp;   **dependencies for the project.**
-9. setup.cfg                &nbsp;&nbsp;&nbsp;&nbsp;   **settings for the linter and coverage.**
-10. wsgi.py                 &nbsp;&nbsp;&nbsp;&nbsp;   **entry point to the flask application**
+        - config.py
+        - docs.yml
+    - __init__.py
+    - settings.py
+5. autorun.py
+6. Procfile                    
+7. README.md                   
+8. requirements.txt            
+9. setup.cfg                   
+10. wsgi.py                    
 
 
-#### Local development
+### Local development
 
 run the following script to envoke the development server: 
 
@@ -85,7 +85,7 @@ def run_server(path, env):
 The following enviroment variables need to be configured before running your application.
 **NB** use the keys as is.
 
-- ##### Flask enviroment
+- #### Flask enviroment
 
 Configures the enviroment to production/development.
 
@@ -93,7 +93,7 @@ Configures the enviroment to production/development.
 FLASK_ENV=development
 ```
 
-- ##### Maximum length
+- #### Maximum length
 
 Configures the maximum amount of elements allowed inside an array.
 
@@ -101,7 +101,7 @@ Configures the maximum amount of elements allowed inside an array.
 MAXIMUM_LENGTH=10_000
 ```
 
-- ##### Allowed commands
+- #### Allowed commands
 
 Protects your server from running malicious commands. 
 
