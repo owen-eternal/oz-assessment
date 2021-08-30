@@ -1,6 +1,11 @@
 # Sorting API
 
-[Try out the API](https://offerzen.herokuapp.com/)
+Endpoint: **http://somesorting.herokuapp.com/api/v1/bubble**
+
+**Container Pull:** 
+```bash
+docker pull 040900507/offerzen-assessment
+```
 
 ### Project Overview: Bubble sort API
 
@@ -154,3 +159,24 @@ class BubbleSort():
         return filtered_list
 ```
 
+### Overview Hosting
+
+I used github action as my remote CI server to conduct the following workflows:
+
+1. on push to my github master branch: 
+    - build development enviroment.
+    - install required dependencies.
+    - run linter for code checks
+    - run code coverage and produce a report
+    - if all the above job passes, commit code to the master branch.
+
+I used Heroku for hosting:
+
+2. on pull by Heroku:
+    - run build
+    - test build
+    - run linter
+    - do code coverage
+    - report
+    - containerize
+    - and run automatic deploys
