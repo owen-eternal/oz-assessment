@@ -9,7 +9,7 @@ template = {
     },
     "version": "0.0.1"
   },
-  "basePath": "/api/v1",  # base bash for blueprint registration
+  "basePath": "/api/v1", 
   "schemes": [
     "http",
     "https"
@@ -31,5 +31,5 @@ swagger_config = {
     "static_url_path": "/flasgger_static",
     # "static_folder": "static",  # must be set by user
     "swagger_ui": True,
-    "specs_route": "/"
+    "specs_route": "/apidocs"
 }
