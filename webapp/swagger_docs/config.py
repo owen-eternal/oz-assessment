@@ -9,7 +9,7 @@ template = {
     },
     "version": "0.0.1"
   },
-  "basePath": "/api/v1", 
+  "basePath": "/api/v1",
   "operationId": "getmyData"
 }
 
